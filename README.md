@@ -20,6 +20,18 @@ yarn bit add src/components/[component-folder]
 yarn bit status
 ```
 
+## build component
+
+```
+yarn bit build
+```
+
+More about the typescript compiler here https://bit.dev/bit/envs/compilers/typescript
+
+### best practives
+
+https://docs.bit.dev/docs/best-practices.html
+
 ### analytics
 
 https://docs.bit.dev/docs/conf-analytics

@@ -6,7 +6,10 @@
   "author": "Marcel Stieber <marcel.stieber@finanzcheck.de>",
   "license": "MIT",
   "bit": {
-    "env": {},
+    "env": {
+      "compiler": "bit.envs/compilers/typescript@3.1.39",
+      "tester": "bit.envs/testers/jest@22.4.3"
+    },
     "componentsDefaultDirectory": "components/{name}",
     "packageManager": "yarn"
   },
