@@ -14,6 +14,12 @@ https://docs.bit.dev/docs/tutorials/bit-react-tutorial
 yarn bit add src/components/[component-folder]
 ```
 
+### component statuy
+
+```
+yarn bit status
+```
+
 ### analytics
 
 https://docs.bit.dev/docs/conf-analytics
