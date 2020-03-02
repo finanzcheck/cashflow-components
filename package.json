@@ -6,6 +6,8 @@
   "author": "Marcel Stieber <marcel.stieber@finanzcheck.de>",
   "license": "MIT",
   "dependencies": {
+    "@emotion/core": "10.0.28",
+    "@emotion/styled": "10.0.27",
     "bit-bin": "^14.7.6",
     "react": "16.13.0",
     "react-dom": "16.13.0"
@@ -14,5 +16,8 @@
     "env": {},
     "componentsDefaultDirectory": "components/{name}",
     "packageManager": "yarn"
+  },
+  "devDependencies": {
+    "prettier": "1.19.1"
   }
 }

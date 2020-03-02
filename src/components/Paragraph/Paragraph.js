@@ -1,3 +1,5 @@
 import React from 'react';
 
-export const Paragraph = ({ children }) => <p>{children}</p>
+import { StyledP } from './Praragraph.style';
+
+export const Paragraph = ({ children }) => <StyledP>{children}</StyledP>;

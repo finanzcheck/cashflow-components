@@ -9,6 +9,11 @@
                 "name": "Paragraph.js"
             },
             {
+                "relativePath": "src/components/Paragraph/Praragraph.style.js",
+                "test": false,
+                "name": "Praragraph.style.js"
+            },
+            {
                 "relativePath": "src/components/Paragraph/index.js",
                 "test": false,
                 "name": "index.js"
