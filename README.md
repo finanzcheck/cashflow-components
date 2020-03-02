@@ -28,6 +28,25 @@ yarn bit build
 
 More about the typescript compiler here https://bit.dev/bit/envs/compilers/typescript
 
+## tag and export
+
+Set a version to all tracked components, and export to this collection.
+
+```
+yarn bit tag --all 1.0.0
+yarn bit export marcelstieber.cashflow-components
+```
+
+NOTE: at the moment the repo is bound to the wrong account
+
+## handle global types
+
+https://docs.bit.dev/docs/ts-guidelines#global-types
+
+## testing
+
+https://bit.dev/bit/envs/testers/jest
+
 ### best practives
 
 https://docs.bit.dev/docs/best-practices.html
