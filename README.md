@@ -65,3 +65,8 @@ yarn bit config set error_reporting false
 ## emotion CSS-in-JS
 
 https://emotion.sh/docs/introduction
+
+### links
+
+typescript guide: https://docs.bit.dev/docs/ts-guidelines#global-types
+quick start: https://docs.bit.dev/docs/quick-start
