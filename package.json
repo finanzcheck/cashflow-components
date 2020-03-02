@@ -6,7 +6,9 @@
   "author": "Marcel Stieber <marcel.stieber@finanzcheck.de>",
   "license": "MIT",
   "dependencies": {
-    "bit-bin": "^14.7.6"
+    "bit-bin": "^14.7.6",
+    "react": "16.13.0",
+    "react-dom": "16.13.0"
   },
   "bit": {
     "env": {},
