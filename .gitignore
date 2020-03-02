@@ -1,0 +1,7 @@
+node_modules/
+*.log*
+*.iml
+.DS_Store
+coverage/
+.npmrc
+report.*

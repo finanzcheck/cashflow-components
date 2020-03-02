@@ -1,0 +1,16 @@
+{
+  "name": "cashflow-components",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "git@github.com:finanzcheck/cashflow-components.git",
+  "author": "Marcel Stieber <marcel.stieber@finanzcheck.de>",
+  "license": "MIT",
+  "dependencies": {
+    "bit-bin": "^14.7.6"
+  },
+  "bit": {
+    "env": {},
+    "componentsDefaultDirectory": "components/{name}",
+    "packageManager": "yarn"
+  }
+}
