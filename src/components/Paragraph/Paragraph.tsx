@@ -6,6 +6,8 @@ type ParagraphProps = {
   children: any;
 };
 
-export const Paragraph = ({ children }: ParagraphProps) => (
+const Paragraph = ({ children }: ParagraphProps) => (
   <StyledP>{children}</StyledP>
 );
+
+export default Paragraph;
