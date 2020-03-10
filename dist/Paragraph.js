@@ -1,3 +1,4 @@
 import React from 'react';
 import { StyledP } from './Praragraph.style';
-export const Paragraph = ({ children }) => (React.createElement(StyledP, null, children));
+const Paragraph = ({ children }) => (React.createElement(StyledP, null, children));
+export default Paragraph;
