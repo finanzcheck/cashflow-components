@@ -2,10 +2,10 @@ import React from 'react';
 
 import { StyledP } from './Praragraph.style';
 
-type PraragraphProps = {
+type ParagraphProps = {
   children: any;
 };
 
-export const Paragraph = ({ children }: PraragraphProps) => (
+export const Paragraph = ({ children }: ParagraphProps) => (
   <StyledP>{children}</StyledP>
 );
