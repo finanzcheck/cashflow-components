@@ -11,12 +11,12 @@
     "esModuleInterop": true,
     "strict": true,
     "noImplicitAny": false,
-    "target": "es2017",
     "module": "esnext",
     "lib": ["es2017", "dom"],
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "target": "es5"
   },
   "include": ["src", "__mocks__"]
 }
