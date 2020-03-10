@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { StyledP } from './Praragraph.style';
+import { StyledP } from './Paragraph.style';
 
 type ParagraphProps = {
   children: any;

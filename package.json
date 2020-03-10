@@ -1,7 +1,7 @@
 {
   "name": "cashflow-components",
   "version": "0.1.0",
-  "main": "index.js",
+  "main": "index.s",
   "repository": "git@github.com:finanzcheck/cashflow-components.git",
   "author": "Marcel Stieber <marcel.stieber@finanzcheck.de>",
   "license": "MIT",
@@ -17,6 +17,7 @@
     "@emotion/core": "10.0.28",
     "@emotion/styled": "10.0.27",
     "bit-bin": "14.7.6",
+    "paragraph": "^0.0.1",
     "react": "16.13.0",
     "react-dom": "16.13.0"
   },

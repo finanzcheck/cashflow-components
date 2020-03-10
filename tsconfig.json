@@ -11,12 +11,13 @@
     "esModuleInterop": true,
     "strict": true,
     "noImplicitAny": false,
+    "target": "es5",
     "module": "esnext",
-    "lib": ["es2017", "dom"],
+    "lib": ["es6", "es7", "dom", "es2017.object", "esnext"],
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "resolveJsonModule": true,
-    "target": "es5"
+    "resolveJsonModule": true
   },
-  "include": ["src", "__mocks__"]
+  "exclude": ["fixtures/**/*", "dist/**/*"],
+  "include": ["src"]
 }

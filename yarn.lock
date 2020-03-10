@@ -3652,6 +3652,11 @@ pad-right@^0.2.2:
   dependencies:
     repeat-string "^1.5.2"
 
+paragraph@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/paragraph/-/paragraph-0.0.1.tgz#3074109dda5ef0f4e7e63830be4dca04f8ec77d9"
+  integrity sha1-MHQQndpe8PTn5jgwvk3KBPjsd9k=
+
 parallel-transform@^1.1.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/parallel-transform/-/parallel-transform-1.2.0.tgz#9049ca37d6cb2182c3b1d2c720be94d14a5814fc"
