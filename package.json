@@ -1,13 +1,31 @@
 {
   "name": "cashflow-components",
   "version": "0.1.0",
-  "main": "index.s",
+  "main": "index.js",
   "repository": "git@github.com:finanzcheck/cashflow-components.git",
   "author": "Marcel Stieber <marcel.stieber@finanzcheck.de>",
   "license": "MIT",
   "bit": {
     "env": {
-      "compiler": "bit.envs/compilers/typescript@3.1.39",
+      "compiler": {
+        "bit.envs/compilers/typescript@3.1.39": {
+          "rawConfig": {
+            "tsconfig": {
+              "compilerOptions": {
+                "target": "ES5",
+                "module": "CommonJS",
+                "lib": [
+                  "Es5",
+                  "Es6",
+                  "Es7",
+                  "dom",
+                  "ESNext"
+                ]
+              }
+            }
+          }
+        }
+      },
       "tester": "bit.envs/testers/jest@22.4.3"
     },
     "componentsDefaultDirectory": "components/{name}",
@@ -17,7 +35,6 @@
     "@emotion/core": "10.0.28",
     "@emotion/styled": "10.0.27",
     "bit-bin": "14.7.6",
-    "paragraph": "^0.0.1",
     "react": "16.13.0",
     "react-dom": "16.13.0"
   },

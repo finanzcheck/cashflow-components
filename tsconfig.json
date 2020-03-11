@@ -11,13 +11,11 @@
     "esModuleInterop": true,
     "strict": true,
     "noImplicitAny": false,
-    "target": "es5",
-    "module": "esnext",
-    "lib": ["es6", "es7", "dom", "es2017.object", "esnext"],
+    "target": "Es5",
+    "module": "CommonJS",
+    "lib": ["Es5", "Es6", "Es7", "dom", "ESNext"],
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "resolveJsonModule": true
-  },
-  "exclude": ["fixtures/**/*", "dist/**/*"],
-  "include": ["src"]
+  }
 }
