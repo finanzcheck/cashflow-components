@@ -1,9 +1,8 @@
 import React from 'react';
-// /** @jsx jsx */
-// import { jsx, css } from '@emotion/core';
+import { css } from '@emotion/core';
 
-// import { h1Style } from './Headline1.style';
-import { H1Styled } from './Headline1.style';
+import { h1Style } from './Headline1.style';
+// import { H1Styled } from './Headline1.style';
 
 type HeadlineProps = {
   children: any;
@@ -20,7 +19,13 @@ type HeadlineProps = {
 // );
 
 const Headline1 = ({ children }: HeadlineProps) => (
-  <H1Styled>{children}</H1Styled>
+  <h1
+    css={css`
+      ${h1Style}
+    `}
+  >
+    {children}
+  </h1>
 );
 
 export default Headline1;
