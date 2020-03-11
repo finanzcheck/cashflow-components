@@ -66,6 +66,21 @@ yarn bit config set error_reporting false
 
 https://emotion.sh/docs/introduction
 
+### usage of css
+
+```
+/** @jsx jsx */
+
+import { css, jsx } from '@emotion/core';
+import { h1Style } from '@bit/marcelstieber.cashflow-components.headline1';
+
+export default (
+	<h1 css={css(h1Style)}>{children}</h1>
+)
+```
+
+It seems `@emotion/styled` (?) is smaller than `@emotion/core` (18K)
+
 ### links
 
 typescript guide: https://docs.bit.dev/docs/ts-guidelines#global-types
