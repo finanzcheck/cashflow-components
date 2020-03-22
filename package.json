@@ -6,7 +6,9 @@
   "author": "Marcel Stieber <marcel.stieber@finanzcheck.de>",
   "license": "MIT",
   "scripts": {
-    "build-token": "yarn theo tokens/json/example.json --transform web --setup tokens/setup.js --format custom-properties.css,module.js --dest tokens/out"
+    "build-token": "yarn theo tokens/json/example.json --transform web --setup tokens/setup.js --format custom-properties.css,module.js,html --dest tokens/out",
+    "preview-token": "open tokens/out/example.html",
+    "token": "yarn build-token && yarn preview-token"
   },
   "bit": {
     "env": {
