@@ -1,0 +1,33 @@
+{
+  "props": {
+    "color_brand": {
+      "value": "#ff0000",
+      "type": "color",
+      "category": "background",
+      "meta": {
+        "foo": "bar"
+      }
+    },
+    "color_button": {
+      "value": "#F09103",
+      "type": "color",
+      "category": "background",
+      "meta": {
+        "some": "meta foo"
+      }
+    }
+  },
+  "global": {
+    "category": "some-category",
+    "meta": {
+      "foo": "baz"
+    }
+  },
+  "aliases": {
+    "sky": "blue",
+    "grass": {
+      "value": "green",
+      "yourMetadata": "How grass looks"
+    }
+  }
+}

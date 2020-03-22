@@ -98,6 +98,34 @@ Design tokens could also be used for branding/theming for customers, and configu
 
 Link: https://uxdesign.cc/design-tokens-for-dummies-8acebf010d71
 
+## JSON Format
+
+```
+{
+  props: {
+    PROP_NAME: {
+      value: "PROP_VALUE",
+      type: "PROP_TYPE",
+      category: "PROP_CATEGORY"
+    }
+  }
+}
+```
+
+```
+{
+	props: {
+		"color_button": {
+			"value": "#F09103",
+			"type": "color",
+			"category": "background"
+		}
+	}
+}
+```
+
+Supported categories: https://github.com/salesforce-ux/theo#supported-categories
+
 ### CLI
 
 | Name                 | Description                                                                   | Default  |
@@ -110,4 +138,6 @@ Link: https://uxdesign.cc/design-tokens-for-dummies-8acebf010d71
 
 ```
 yarn theo yml/buttons.yml --transform web --format custom-properties.css,module.js --dest stdout
+
+yarn theo json/example.json --transform web --format custom-properties.css,module.js --dest stdout
 ```

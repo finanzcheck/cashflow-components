@@ -5,6 +5,9 @@
   "repository": "git@github.com:finanzcheck/cashflow-components.git",
   "author": "Marcel Stieber <marcel.stieber@finanzcheck.de>",
   "license": "MIT",
+  "scripts": {
+    "build-token": "yarn theo tokens/json/example.json --transform web --format custom-properties.css,module.js --dest tokens/out"
+  },
   "bit": {
     "env": {
       "compiler": {
