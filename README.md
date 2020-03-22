@@ -92,8 +92,22 @@ Design tokens are indivisible pieces of an interface like colors, font-sizes, sp
 
 Design tokens could also be used for branding/theming for customers, and configurable settings-based theming like “dark/night mode” or “comfortable/compact” spacing changes.
 
-### Theo
+## Theo
 
 [Theo](https://github.com/salesforce-ux/theo) is a degsign tolekn generator by Salesforce. It takes JSON or YAML and outputs CSS, SASS, XML, JSON (whatever the platform needs).
 
 Link: https://uxdesign.cc/design-tokens-for-dummies-8acebf010d71
+
+### CLI
+
+| Name                 | Description                                                                   | Default  |
+| -------------------- | ----------------------------------------------------------------------------- | -------- |
+| --transform          | valid theo transform                                                          | raw      |
+| --format             | Comma separated list of valid theo formats                                    | raw.json |
+| --dest               | The path where the result should be written                                   | stdout   |
+| --setup              | The path to an optional JS module that can set up Theo before transformation. |          |
+| --resolveMetaAliases | Resolve aliases in metadata                                                   | false    |
+
+```
+yarn theo yml/buttons.yml --transform web --format custom-properties.css,module.js --dest stdout
+```
