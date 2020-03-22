@@ -1,3 +1,4 @@
+// NOTE: transformation uses prop.get() as prop is a Map object
 module.exports = theo => {
   theo.registerValueTransform(
     'addunit',
