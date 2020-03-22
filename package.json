@@ -38,13 +38,13 @@
     "@emotion/core": "10.0.28",
     "@emotion/styled": "10.0.27",
     "bit-bin": "14.7.6",
-    "react": "16.13.0",
-    "react-dom": "16.13.0"
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
   },
   "devDependencies": {
-    "@types/react": "16.9.23",
+    "@types/react": "16.9.25",
     "@types/react-dom": "16.9.5",
-    "prettier": "1.19.1",
+    "prettier": "2.0.1",
     "theo": "8.1.5",
     "typescript": "3.8.3"
   }
