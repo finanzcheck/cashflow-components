@@ -2,25 +2,25 @@
 
 Shared frontend react components
 
-## setup docs
+## BIT
+
+### Setup Docs
 
 https://docs.bit.dev/docs/tutorials/bit-react-tutorial
 
-## BIT
-
-### add component
+### Add Component
 
 ```
 yarn bit add src/components/[component-folder]
 ```
 
-### component statuy
+### Component Status
 
 ```
 yarn bit status
 ```
 
-## build component
+### Build Component
 
 ```
 yarn bit build
@@ -28,7 +28,7 @@ yarn bit build
 
 More about the typescript compiler here https://bit.dev/bit/envs/compilers/typescript
 
-## tag and export
+### Tag and Export
 
 Set a version to all tracked components, and export to this collection.
 
@@ -39,19 +39,19 @@ yarn bit export marcelstieber.cashflow-components
 
 NOTE: at the moment the repo is bound to the wrong account
 
-## handle global types
+### Handle Global Types
 
 https://docs.bit.dev/docs/ts-guidelines#global-types
 
-## testing
+### Testing
 
 https://bit.dev/bit/envs/testers/jest
 
-### best practives
+### Best Practives
 
 https://docs.bit.dev/docs/best-practices.html
 
-### analytics
+### Analytics
 
 https://docs.bit.dev/docs/conf-analytics
 
@@ -62,11 +62,11 @@ yarn bit config set analytics_reporting false
 yarn bit config set error_reporting false
 ```
 
-## emotion CSS-in-JS
+## Emotion CSS-in-JS
 
 https://emotion.sh/docs/introduction
 
-### usage of css
+### Usage of CSS
 
 ```
 /** @jsx jsx */
@@ -81,7 +81,19 @@ export default (
 
 It seems `@emotion/styled` (?) is smaller than `@emotion/core` (18K)
 
-### links
+### Links
 
 typescript guide: https://docs.bit.dev/docs/ts-guidelines#global-types
 quick start: https://docs.bit.dev/docs/quick-start
+
+## Design Tokens
+
+Design tokens are indivisible pieces of an interface like colors, font-sizes, spaces, animations, shadows, z-indexes, breakpoints and so on… These central and tiny pieces of UI information will be used across several platform during the conception of a digital product. They’re called: design tokens.
+
+Design tokens could also be used for branding/theming for customers, and configurable settings-based theming like “dark/night mode” or “comfortable/compact” spacing changes.
+
+### Theo
+
+[Theo](https://github.com/salesforce-ux/theo) is a degsign tolekn generator by Salesforce. It takes JSON or YAML and outputs CSS, SASS, XML, JSON (whatever the platform needs).
+
+Link: https://uxdesign.cc/design-tokens-for-dummies-8acebf010d71
