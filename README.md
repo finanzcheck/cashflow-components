@@ -128,6 +128,8 @@ Supported categories: https://github.com/salesforce-ux/theo#supported-categories
 
 ### CLI
 
+https://github.com/salesforce-ux/theo/blob/master/CLI.md
+
 | Name                 | Description                                                                   | Default  |
 | -------------------- | ----------------------------------------------------------------------------- | -------- |
 | --transform          | valid theo transform                                                          | raw      |
