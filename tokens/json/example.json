@@ -3,17 +3,19 @@
     "color_brand": {
       "value": "#ff0000",
       "type": "color",
-      "category": "background",
-      "meta": {
-        "foo": "bar"
-      }
+      "category": "background"
     },
     "color_button": {
       "value": "#F09103",
       "type": "color",
-      "category": "background",
+      "category": "background"
+    },
+    "font_small": {
+      "value": "12",
+      "type": "size",
+      "category": "sizing",
       "meta": {
-        "some": "meta foo"
+        "unit": "px"
       }
     }
   },

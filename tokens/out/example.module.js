@@ -1,2 +1,3 @@
-export const colorBrand = "rgb(255, 0, 0)";
-export const colorButton = "rgb(240, 145, 3)";
+export const colorBrand = "#ff0000";
+export const colorButton = "#F09103";
+export const fontSmall = "12px";

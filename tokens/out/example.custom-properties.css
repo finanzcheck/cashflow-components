@@ -1,5 +1,6 @@
 
 :root {
-  --color-brand: rgb(255, 0, 0);
-  --color-button: rgb(240, 145, 3);
+  --color-brand: #ff0000;
+  --color-button: #F09103;
+  --font-small: 12px;
 }
