@@ -8,7 +8,8 @@
   "scripts": {
     "build-token": "yarn theo tokens/json/example.json --transform web --setup tokens/setup.js --format custom-properties.css,module.js,html --dest tokens/out",
     "preview-token": "open tokens/out/example.html",
-    "token": "yarn build-token && yarn preview-token"
+    "token": "yarn build-token && yarn preview-token",
+    "figma": "dotenv-load babel-node ./scripts/fetchToken.js"
   },
   "bit": {
     "env": {
@@ -44,9 +45,13 @@
     "react-dom": "16.13.1"
   },
   "devDependencies": {
+    "@babel/node": "7.8.7",
     "@types/react": "16.9.25",
     "@types/react-dom": "16.9.5",
+    "axios": "0.19.2",
+    "dotenv-load": "2.0.0",
     "prettier": "2.0.1",
+    "style-dictionary": " 2.8.3",
     "theo": "8.1.5",
     "typescript": "3.8.3"
   }
