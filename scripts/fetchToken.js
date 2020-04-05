@@ -1,12 +1,9 @@
 const axios = require('axios');
 
-// https://www.figma.com/file/:key/:title
-const getEndpoint =
-  'https://www.figma.com/file/tpwhHRfoXMkzuFIYE9becy/CashFlow-Code?node-id=0%3A1';
+// https://github.com/mikaelvesavuori/figmagic/tree/master/bin/functions
+// https://www.figma.com/file/K39TRbltDVcWFlpzw9r7Zh/Figmagic-%E2%80%94-Design-System-for-Tokens?node-id=2605%3A12
 
-/*
-curl -H 'X-FIGMA-TOKEN: process.env.FIGME_PERSONAL_ACCESS_TOKEN' 'https://api.figma.com/v1/files/tpwhHRfoXMkzuFIYE9becy'
-  */
+// from article https://www.figma.com/file/JfZz46bVQzUA2TTtoSnhnG/Ishan(deisgn-token)?node-id=5%3A19
 
 const figmaKey = 'tpwhHRfoXMkzuFIYE9becy'; // TODO: put to env
 const figmaAPIToken = process.env.FIGME_PERSONAL_ACCESS_TOKEN;
@@ -21,7 +18,9 @@ async function getFigmaObjTree(figmaApiKey, figmaId) {
     })
     .then((res) => {
       let result = res.data;
-      console.log('result', result);
+      // on result is the information about the last changed date -> compare with a cached one
+      // console.log(result.document.children[0].children); // the frames
+      console.log(result.document.children[0].children[1]); // type
     })
     .catch((err) => {
       console.log('errors');
