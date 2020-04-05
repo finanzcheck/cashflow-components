@@ -50,8 +50,9 @@
     "@types/react-dom": "16.9.5",
     "axios": "0.19.2",
     "dotenv-load": "2.0.0",
+    "fs-extra": "9.0.0",
+    "path": "0.12.7",
     "prettier": "2.0.1",
-    "style-dictionary": " 2.8.3",
     "theo": "8.1.5",
     "typescript": "3.8.3"
   }
