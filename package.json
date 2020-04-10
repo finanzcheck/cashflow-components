@@ -46,13 +46,13 @@
   },
   "devDependencies": {
     "@babel/node": "7.8.7",
-    "@types/react": "16.9.25",
-    "@types/react-dom": "16.9.5",
+    "@types/react": "16.9.34",
+    "@types/react-dom": "16.9.6",
     "axios": "0.19.2",
     "dotenv-load": "2.0.0",
     "fs-extra": "9.0.0",
     "path": "0.12.7",
-    "prettier": "2.0.1",
+    "prettier": "2.0.4",
     "theo": "8.1.5",
     "typescript": "3.8.3"
   }
