@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { FunctionComponent, ReactNode } from 'react';
 
 import { H1Styled } from './Headline1.style';
+import { ThemeProps } from '../withTheme/theme/Theming';
 
 type HeadlineProps = {
-  children: any;
+  children: ReactNode;
 };
 
-const Headline1 = ({ children }: HeadlineProps) => (
-  <H1Styled>{children}</H1Styled>
-);
+const Headline1: FunctionComponent<HeadlineProps & ThemeProps> = ({
+  children,
+  ...restProps
+}) => <H1Styled {...restProps}>{children}</H1Styled>;
 
 export default Headline1;

@@ -77,3 +77,7 @@ Questions:
 - how to use styles sub-object?
 - what categories does Theo have? -> https://github.com/salesforce-ux/theo#supported-categories
 */
+
+// https://www.figma.com/developers/api#library-items
+// https://blog.prototypr.io/design-tokens-with-figma-aef25c42430f
+// https://www.figma.com/file/tpwhHRfoXMkzuFIYE9becy/CashFlow-Code?node-id=0%3A1

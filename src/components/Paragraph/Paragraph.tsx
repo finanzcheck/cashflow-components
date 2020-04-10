@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { FunctionComponent, ReactNode } from 'react';
 
 import { StyledP } from './Paragraph.style';
+import { ThemeProps } from '../withTheme/theme/Theming';
 
 type ParagraphProps = {
-  children: any;
+  children: ReactNode;
 };
 
-const Paragraph = ({ children }: ParagraphProps) => (
-  <StyledP>{children}</StyledP>
-);
+const Paragraph: FunctionComponent<ParagraphProps & ThemeProps> = ({
+  children,
+  ...restProps
+}) => <StyledP {...restProps}>{children}</StyledP>;
 
 export default Paragraph;
