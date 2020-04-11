@@ -1,4 +1,4 @@
-export const toSnakeCase = (str: String) => {
+export const toSnakeCase = (str: string): string => {
   const matched =
     str &&
     str.match(
@@ -10,6 +10,9 @@ export const toSnakeCase = (str: String) => {
   }
   return str;
 };
+// This is not necessarily a good solution as the return value may be the wrong input
+// this will warn the user if he uses TypeScript as well but it will not for JS -> bad api design
+// false security !!
 
 /* coming from
 
