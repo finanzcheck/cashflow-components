@@ -11,7 +11,7 @@
         "children": [
           {
             "id": "9:46",
-            "name": "Z Indices",
+            "name": "Z Index",
             "type": "FRAME",
             "blendMode": "PASS_THROUGH",
             "children": [
@@ -508,7 +508,7 @@
           },
           {
             "id": "9:59",
-            "name": "Shadows",
+            "name": "Shadow",
             "type": "FRAME",
             "blendMode": "PASS_THROUGH",
             "children": [
@@ -658,7 +658,7 @@
           },
           {
             "id": "9:63",
-            "name": "Radii",
+            "name": "Radius",
             "type": "FRAME",
             "blendMode": "PASS_THROUGH",
             "children": [
@@ -819,7 +819,7 @@
           },
           {
             "id": "9:68",
-            "name": "Media Queries",
+            "name": "Media Query",
             "type": "FRAME",
             "blendMode": "PASS_THROUGH",
             "children": [
@@ -1115,7 +1115,7 @@
           },
           {
             "id": "9:78",
-            "name": "Line Heights",
+            "name": "Line Height",
             "type": "FRAME",
             "blendMode": "PASS_THROUGH",
             "children": [
@@ -1318,7 +1318,7 @@
           },
           {
             "id": "9:83",
-            "name": "Letter Spacings",
+            "name": "Letter Spacing",
             "type": "FRAME",
             "blendMode": "PASS_THROUGH",
             "children": [
@@ -1483,7 +1483,7 @@
           },
           {
             "id": "9:87",
-            "name": "Font Weights",
+            "name": "Font Weight",
             "type": "FRAME",
             "blendMode": "PASS_THROUGH",
             "children": [
@@ -1682,7 +1682,7 @@
           },
           {
             "id": "9:92",
-            "name": "Font Sizes",
+            "name": "Font Size",
             "type": "FRAME",
             "blendMode": "PASS_THROUGH",
             "children": [
@@ -2409,7 +2409,7 @@
           },
           {
             "id": "9:110",
-            "name": "Font Families",
+            "name": "Font Family",
             "type": "FRAME",
             "blendMode": "PASS_THROUGH",
             "children": [
@@ -2608,7 +2608,7 @@
           },
           {
             "id": "9:115",
-            "name": "Colors",
+            "name": "Color",
             "type": "FRAME",
             "blendMode": "PASS_THROUGH",
             "children": [
@@ -2639,7 +2639,6 @@
                 "strokes": [],
                 "strokeWeight": 1,
                 "strokeAlign": "INSIDE",
-                "styles": { "fill": "9:27" },
                 "effects": []
               },
               {
@@ -3158,7 +3157,7 @@
           },
           {
             "id": "9:133",
-            "name": "Border Widths",
+            "name": "Border Width",
             "type": "FRAME",
             "blendMode": "PASS_THROUGH",
             "children": [
@@ -3421,12 +3420,6 @@
       "styleType": "TEXT",
       "description": ""
     },
-    "9:27": {
-      "key": "1981b1e372c7048ffcf8e330b76dc845e970381c",
-      "name": "Green 3",
-      "styleType": "FILL",
-      "description": ""
-    },
     "9:28": {
       "key": "1c4404aa641008fb0ac27d0a162e65ae23321a23",
       "name": "Green 2",
@@ -3519,8 +3512,8 @@
     }
   },
   "name": "CashFlow Code",
-  "lastModified": "2020-04-05T08:19:38.847541Z",
-  "thumbnailUrl": "https://s3-alpha-sig.figma.com/thumbnails/bd0ea565-b0ba-43ee-a962-600d78bbe565?Expires=1586736000&Signature=bSG7fwk40WfwLMu1UASlb0ZacGG891K7jxrzN~oWZDz39Mt3b~pYSE3P3JXiQpaBtD5KzGKzggb~47fr4JuBKAr4AACzl0Xufa4ZqSlh8ZWA8-WaBmDptGHDVGi5WMfpdaP8jcqmPX0K2wkXnrMcjg6uAbrjE2TT2dgd1oMBermGmdoSQKADSR4pnJQGQDtENBefYjwS5hZdjm7TSmne2Z7bVK-hHEALYQXbFClqCLCxHbjHvVFM0hbt2qrEc81dBqNiyTIqdKMUq~gJH1QbzwmB6jLgUlZbLVmqhIETiqduzn-Zg1lgWQI7SyIapgwwYqHkhWVO1n2q8jc86uJ-ng__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
-  "version": "289267854",
+  "lastModified": "2020-04-11T05:49:20.270768Z",
+  "thumbnailUrl": "https://s3-alpha-sig.figma.com/thumbnails/fb7a5454-f0f3-4264-a6e2-8332d3c5f8c5?Expires=1587340800&Signature=SDs-0-a25uCr4ZwktPTiRqVs2wwtcGUpUb446pd-ihL4MzWgOpGBpadW9eDHeKweglbAYxNLdFxa5lw1nmXfcK11naO283~7r-V7aj5U4CAZH~7EJF3dbejG17H4QvoLS0xYh6kyytv46lOwfdn1507~Z-vXL7tMXEoFdX~Tn9W5kydHe1vEiEdxDjS6DmeyTWR5CKq0F10YOUpJFZFYISLLHIrsEPVRvF4oWSgcfMtpz6jSxP~TePNEOoZp-WPr-vNnK0EicnZbl~0zxLrJKChoeZSvOAU7V2GOhdSfyw9BTZjYiKCwKC8huEPH31U6gtsOdAxgYKhK8PoVF9~irA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+  "version": "294886375",
   "role": "editor"
 }

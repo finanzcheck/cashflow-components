@@ -7,6 +7,7 @@ type ParagraphProps = {
   children: ReactNode;
 };
 
+// typescript gives presudo security about types as here could be passed anything not only those two!!!
 const Paragraph: FunctionComponent<ParagraphProps & ThemeProps> = ({
   children,
   ...restProps
