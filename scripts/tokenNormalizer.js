@@ -55,7 +55,7 @@ const normalize = rawData => {
     const props = frame.children.reduce((state, child) => {
       const result = applyCorrespondingSchema(schemaName, child);
 
-      if (properties) {
+      if (result) {
         return {
           ...state,
           [result.name]: { ...result.properties },
@@ -74,10 +74,13 @@ const normalize = rawData => {
   }, {});
 };
 
+const TOKEN_PATH = path.resolve(__dirname, '../tokens/json/figma.json');
+const storeFile = fields => fs.outputJson(TOKEN_PATH, fields);
+
 // TODO: combine in a generate script that fetches and normalizes
 fs.readJson(PATH)
   .then(json => {
-    normalize(json);
+    storeFile(normalize(json));
   })
   .catch(err => {
     console.error(err);
