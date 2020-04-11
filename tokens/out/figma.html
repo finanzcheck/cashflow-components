@@ -1,0 +1,347 @@
+
+      <!DOCTYPE html>
+      <html lang="en">
+        <head>
+          <meta charset="utf-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <title>Design Tokens</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" />
+          <style>
+            html {
+              box-sizing: border-box;
+              font-size: 1em;
+              font-family: Helvetica, Arial, sans-serif;
+              line-height: 1.5;
+              background: #fff;
+              color: #444;
+            }
+            *,
+            *:before,
+            *:after {
+              box-sizing: inherit;
+            }
+            body { font-size: .75rem; }
+            ::-moz-selection {
+              background: #b3d4fc;
+              text-shadow: none;
+            }
+            ::selection {
+              background: #b3d4fc;
+              text-shadow: none;
+            }
+            .banner,
+            .contentinfo { background: #f5f5f5; }
+            .banner { padding: 1em 0; }
+            .container {
+              margin: 0 auto;
+              padding: 0 2rem;
+              max-width: 80rem;
+            }
+            main {
+              margin-right: -2rem;
+              margin-left:  -2rem;
+              padding-bottom: 2rem;
+            }
+            h1 {
+              margin: 0;
+              font-weight: normal;
+              line-height: 1.25;
+            }
+            table {
+              table-layout: fixed;
+              border-collapse: separate;
+              border-spacing: 1rem;
+              width: 100%;
+            }
+            th,
+            td {
+              padding: 0 1rem;
+              vertical-align: baseline;
+              word-break: break-word;
+              hyphens: auto;
+            }
+            th {
+              font-weight: normal;
+              text-align: left;
+            }
+            thead th {
+              border-bottom: 1px solid #eee;
+              padding-top: 1rem;
+              padding-bottom: .5rem;
+              color: #999;
+            }
+            thead th:first-child {
+              font-size: 1.25rem;
+              color: inherit;
+            }
+            code { font-family: monaco, Consolas, monospace, monospace; }
+            hr {
+              display: block;
+              margin: 2rem 0;
+              border: 0;
+              border-top: 1px solid #eee;
+              padding: 0;
+              height: 1px;
+            }
+            .metric-box,
+            .radius-box {
+              display: inline-block;
+              vertical-align: middle;
+              background: #eee;
+            }
+            .radius-box {
+              width: 100%;
+              height: 3rem;
+            }
+            .radius-box.borderRadiusCircle {
+              width: 3rem;
+            }
+            .line-height-example {
+              border-bottom: 1px solid #eee;
+              background-image: -webkit-linear-gradient(#eee 1px, transparent 1px);
+              background-image: linear-gradient(#eee 1px, transparent 1px);
+              background-size: 100% 1rem;
+            }
+          </style>
+        </head>
+        <body>
+          <header role="banner" class="banner">
+            <div class="container">
+              <h1>Design Tokens</h1>
+            </div>
+          </header>
+          <div class="container">
+            <main role="main">
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+      <section>
+        <table>
+          
+      <thead>
+        <tr id=background-color>
+          <th scope="col">Background Colors</th>
+          <th scope="col">Value</th>
+          <th scope="col">Examples</th>
+          <th scope="col">Usage</th>
+        </tr>
+      </thead>
+    
+          <tbody>
+            <tr>
+        <th scope="row">
+          <code>colorBlack</code>
+        </th>
+        <td>
+          <code>rgba(51, 51, 51, 1)</code>
+        </td>
+        <td style="background-color: rgba(51, 51, 51, 1); border: 1px solid #f6f6f6;"></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>colorBlue1</code>
+        </th>
+        <td>
+          <code>rgba(47, 128, 237, 1)</code>
+        </td>
+        <td style="background-color: rgba(47, 128, 237, 1); border: 1px solid #f6f6f6;"></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>colorBlue2</code>
+        </th>
+        <td>
+          <code>rgba(45, 156, 219, 1)</code>
+        </td>
+        <td style="background-color: rgba(45, 156, 219, 1); border: 1px solid #f6f6f6;"></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>colorBlue3</code>
+        </th>
+        <td>
+          <code>rgba(86, 204, 242, 1)</code>
+        </td>
+        <td style="background-color: rgba(86, 204, 242, 1); border: 1px solid #f6f6f6;"></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>colorOrange</code>
+        </th>
+        <td>
+          <code>rgba(242, 153, 74, 1)</code>
+        </td>
+        <td style="background-color: rgba(242, 153, 74, 1); border: 1px solid #f6f6f6;"></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>colorWhite</code>
+        </th>
+        <td>
+          <code>rgba(255, 255, 255, 1)</code>
+        </td>
+        <td style="background-color: rgba(255, 255, 255, 1); border: 1px solid #f6f6f6;"></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>colorYellow</code>
+        </th>
+        <td>
+          <code>rgba(242, 201, 76, 1)</code>
+        </td>
+        <td style="background-color: rgba(242, 201, 76, 1); border: 1px solid #f6f6f6;"></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>colorGray1</code>
+        </th>
+        <td>
+          <code>rgba(79, 79, 79, 1)</code>
+        </td>
+        <td style="background-color: rgba(79, 79, 79, 1); border: 1px solid #f6f6f6;"></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>colorNeon</code>
+        </th>
+        <td>
+          <code>rgba(228, 255, 193, 1)</code>
+        </td>
+        <td style="background-color: rgba(228, 255, 193, 1); border: 1px solid #f6f6f6;"></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>colorGray2</code>
+        </th>
+        <td>
+          <code>rgba(130, 130, 130, 1)</code>
+        </td>
+        <td style="background-color: rgba(130, 130, 130, 1); border: 1px solid #f6f6f6;"></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>colorGray3</code>
+        </th>
+        <td>
+          <code>rgba(189, 189, 189, 1)</code>
+        </td>
+        <td style="background-color: rgba(189, 189, 189, 1); border: 1px solid #f6f6f6;"></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>colorGray4</code>
+        </th>
+        <td>
+          <code>rgba(224, 224, 224, 1)</code>
+        </td>
+        <td style="background-color: rgba(224, 224, 224, 1); border: 1px solid #f6f6f6;"></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>colorRed</code>
+        </th>
+        <td>
+          <code>rgba(235, 87, 87, 1)</code>
+        </td>
+        <td style="background-color: rgba(235, 87, 87, 1); border: 1px solid #f6f6f6;"></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>colorGray5</code>
+        </th>
+        <td>
+          <code>rgba(242, 242, 242, 1)</code>
+        </td>
+        <td style="background-color: rgba(242, 242, 242, 1); border: 1px solid #f6f6f6;"></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>colorGreen1</code>
+        </th>
+        <td>
+          <code>rgba(33, 150, 83, 1)</code>
+        </td>
+        <td style="background-color: rgba(33, 150, 83, 1); border: 1px solid #f6f6f6;"></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>colorGreen2</code>
+        </th>
+        <td>
+          <code>rgba(39, 174, 96, 1)</code>
+        </td>
+        <td style="background-color: rgba(39, 174, 96, 1); border: 1px solid #f6f6f6;"></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <th scope="row">
+          <code>colorGreen3</code>
+        </th>
+        <td>
+          <code>rgba(111, 207, 151, 1)</code>
+        </td>
+        <td style="background-color: rgba(111, 207, 151, 1); border: 1px solid #f6f6f6;"></td>
+        <td></td>
+      </tr>
+          </tbody>
+        </table>
+        <hr />
+      </section>
+    
+              
+              
+              
+              
+              
+              
+              
+              
+              
+            </main>
+          </div>
+        </body>
+      </html>
+    
