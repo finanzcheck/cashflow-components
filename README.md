@@ -192,3 +192,67 @@ Response:
 ```
 
 [docs](https://www.figma.com/developers/api#get-images-endpoint)
+
+# TODO
+
+https://www.figma.com/plugin-docs/api/ComponentNode/
+
+export async (do we need this?)
+
+- https://www.figma.com/plugin-docs/api/properties/nodes-exportasync/
+- https://spectrum.chat/figma/extensions-and-api/writing-to-image-fills-uint8array-help~597c37b7-a682-480a-8e2d-8d9af90f05f7
+
+some helpful methods https://github.com/figma/figma-api-demo/blob/master/figma-to-react/lib/figma.js
+
+Figma to React example
+https://github.com/figma/figma-api-demo/blob/master/figma-to-react/main.js#L106
+
+a lot helper for schema
+https://github.com/figma/figma-api-demo/blob/master/figma-to-react/lib/figma.js
+
+TODO: normalize ->
+
+```
+document -> children(CANVAS) -> children(FRAME.name -> colors, text, etc.) -> children -> [{}]
+  id
+  name
+  characters -> (actual text)
+  styles -> { fill: styleId }
+  fills -> color -> rgb: 255 * value each
+
+  e.g. name= SPACING -> children[x].name = 'huge' -> absoluteBoundingBox.widht|height
+  FRAME-NAME === type of normilization -> child-NAME === styleName value === fill|absoluteBoundingBox|style|...
+}]
+```
+
+`styles -> [{ styleId -> type, name, no values }]` ?? usable ??
+
+Goal:
+
+```
+"font_small": {           -> FRAMAE.name + '_' + CHILD.name
+  "value": "12",          -> needs selector
+  "type": "size",         -> needs mapping
+  "category": "sizing",   -> needs mapping
+  "meta": {               -> ?? needed ?? how to use in Figma?
+    "unit": "px"
+  }
+}
+```
+
+style from document example:
+"lineHeightPx": 18.75,
+"lineHeightPercent": 100,
+-> needs translation to proper CSS -> meta could be used
+
+Questions:
+
+- can components only be loaded as images?
+- how to use meta data for components to give information to load as image or not
+- how to use styles sub-object?
+- what categories does Theo have? -> https://github.com/salesforce-ux/theo#supported-categories
+  \*/
+
+// https://www.figma.com/developers/api#library-items
+// https://blog.prototypr.io/design-tokens-with-figma-aef25c42430f
+// https://www.figma.com/file/tpwhHRfoXMkzuFIYE9becy/CashFlow-Code?node-id=0%3A1
