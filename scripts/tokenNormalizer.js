@@ -1,7 +1,7 @@
 import fs from 'fs-extra';
 import path from 'path';
 
-import { applyMiddlewares } from '../lib/helpers/middleware';
+import { applyMiddlewares } from '../lib/helper/middleware';
 import * as colorsSchema from './schema/colorsSchema';
 
 const PATH = path.resolve(__dirname, '../__temp__/figma.json');

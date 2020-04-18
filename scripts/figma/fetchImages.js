@@ -1,101 +1,108 @@
+// inspired by https://github.com/figma/figma-api-demo/blob/master/figma-to-react/lib/figma.js
 import fetch from 'node-fetch';
 import fs from 'fs-extra';
 import path from 'path';
 
-const figmaKey = 'tpwhHRfoXMkzuFIYE9becy'; // TODO: put to env
+import { logger } from '../../lib/helper/logger';
+
+const figmaKey = process.env.FIGMA_FILE_KEY;
 const figmaAPIToken = process.env.FIGME_PERSONAL_ACCESS_TOKEN;
 const baseUrl = 'https://api.figma.com';
-const IMAGEE_PATH = '../../__temp__/images';
+const TEMP_PATH = '../../__temp__';
+const IMAGE_PATH = `${TEMP_PATH}/images`;
+const CACHE_PATH = path.resolve(__dirname, `${TEMP_PATH}/figma.json`);
 
-// inspired by https://github.com/figma/figma-api-demo/blob/master/figma-to-react/lib/figma.js
-const ids = ['29:22'].join(','); // hard coded component id
+const formats = [{ format: 'svg' }, { format: 'png', scale: '2' }];
 
 const headers = new fetch.Headers();
 headers.append('X-Figma-Token', figmaAPIToken);
 
-async function writeFile(name, data) {
-  const filePath = path.resolve(__dirname, `${IMAGEE_PATH}/${name}`);
-  await fs.ensureDir(path.resolve(__dirname, `${IMAGEE_PATH}/`));
-
-  return fs.writeFile(filePath, data);
-}
-
-const fetchFile = async (url, pathName) => {
-  console.log('[fetching]', url);
+const cacheFile = async (url, pathName) => {
+  logger.wait(`cache file from ${url}`);
   await fetch(url).then(res => {
     const dest = fs.createWriteStream(pathName);
     res.body.pipe(dest);
-    console.log('[fetching] DONE');
+    logger.event(`cache file done`);
   });
 };
 
-async function fetchSVG() {
-  let data = await fetch(
-    `${baseUrl}/v1/images/${figmaKey}?ids=${ids}&format=svg`,
-    {
-      headers,
-    },
-  );
-
-  const imageJSON = await data.json();
-  // imageJSON example:
-  // {
-  //   err: null,
-  //   images: {
-  //     '29:22': 'https://s3-us-west-2.amazonaws.com/figma-alpha-api/img/f92c/9ac0/920895cfb2ca2c2c315a5e323fc48a7a'
-  //   }
-  // }
-
-  const images = imageJSON.images || {};
-  const SVG_PATH = path.resolve(
-    __dirname,
-    '../../__temp__/images/top_zins.svg',
-  );
-
-  await fetchFile(images['29:22'], SVG_PATH);
-  console.log('svg DONE');
-}
-
-async function fetchPNG() {
-  const params = {
-    format: 'png',
-    scale: '2',
-  };
-
+/**
+ * Fetch component images and cache them
+ * @param {string} filePath file path without traling slash
+ * @param {object} images
+ * @param {string} images.id component id
+ * @param {string} images.name file name
+ * @param {object} params
+ * @param {string} params.format file format svg|png
+ * @param {string|number} [params.scale] scale for png
+ * @returns {void}
+ */
+async function cacheComponentImages(filePath, images, params) {
   const paramsString = Object.keys(params).reduce((string, key) => {
     return (string += `&${key}=${params[key]}`);
   }, '');
 
-  let data = await fetch(
+  const ids = images.map(image => image.id).join(',');
+
+  const imagesPaths = images.reduce((state, image) => {
+    state[image.id] = path.resolve(
+      __dirname,
+      `${filePath}/${image.name}.${params.format}`,
+    );
+    return state;
+  }, {});
+
+  const imagesResponse = await fetch(
     `${baseUrl}/v1/images/${figmaKey}?ids=${ids}${paramsString}`,
     {
       headers,
     },
+  )
+    .then(res => {
+      return res.json();
+    })
+    .then(json => {
+      if (json.status) {
+        throw new Error(json.err);
+      }
+      return json.images || {};
+    })
+    .catch(err => {
+      logger.error(`fetch: ${logger.highlightError(err)}`);
+      return {};
+    });
+
+  return Promise.all(
+    Object.keys(imagesResponse).map(id =>
+      cacheFile(imagesResponse[id], imagesPaths[id]),
+    ),
   );
-
-  const imageJSON = await data.json();
-  // imageJSON example:
-  // {
-  //   err: null,
-  //   images: {
-  //     '29:22': 'https://s3-us-west-2.amazonaws.com/figma-alpha-api/img/f92c/9ac0/920895cfb2ca2c2c315a5e323fc48a7a'
-  //   }
-  // }
-
-  const images = imageJSON.images || {};
-  const PNG_PATH = path.resolve(
-    __dirname,
-    '../../__temp__/images/top_zins.png',
-  );
-
-  fetch(images['29:22']).then(res => {
-    const dest = fs.createWriteStream(PNG_PATH);
-    res.body.pipe(dest);
-    console.log('....');
-  });
-
-  console.log(': image written :');
 }
 
-fetchSVG();
-// fetchPNG();
+logger.info('fetching images');
+fs.readJson(CACHE_PATH)
+  .then(json => {
+    if (!json.components || Object.keys(json.components).length === 0) {
+      logger.warn('no components to handle');
+      return null;
+    }
+
+    const components = Object.keys(json.components).map(key => {
+      return {
+        id: key,
+        name: json.components[key].name,
+      };
+    });
+
+    return Promise.all(
+      formats.map(format =>
+        cacheComponentImages(IMAGE_PATH, components, format),
+      ),
+    );
+  })
+  .then(() => {
+    logger.info('fetching images done');
+  })
+  .catch(err => {
+    logger.error(`read cache: ${logger.highlightError(err)}`);
+  });

@@ -143,3 +143,52 @@ yarn theo yml/buttons.yml --transform web --format custom-properties.css,module.
 
 yarn theo json/example.json --transform web --format custom-properties.css,module.js --dest stdout
 ```
+
+## FIGMA
+
+API base url: `https://api.figma.com/`
+
+[API docs](https://www.figma.com/developers/api)
+
+### GET file
+
+GET/v1/files/:key
+
+Response: resonse is cached at `__temp__/figma.json`
+
+[docs](https://www.figma.com/developers/api#get-files-endpoint)
+
+### GET File Components
+
+GET/v1/files/:file_key/components
+
+Response:
+
+```
+{
+  "error": false,
+  "status": 200,
+  "meta": {
+    "components": []
+  }
+}
+```
+
+[docs](https://www.figma.com/developers/api#get-file-components-endpoint)
+
+### GET Images
+
+GET /v1/images/:key
+
+Response:
+
+```
+{
+  "err": null,
+  "images": {
+    "29:22": "https://s3-us-west-2.amazonaws.com/figma-alpha-api/img/ef69/3060/b6765d49277bc7f3ff1aab93c3ec1e94"
+  }
+}
+```
+
+[docs](https://www.figma.com/developers/api#get-images-endpoint)

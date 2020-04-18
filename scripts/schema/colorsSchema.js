@@ -1,4 +1,4 @@
-import { toSnakeCase } from '../../lib/helpers/cases';
+import { toSnakeCase } from '../../lib/helper/cases';
 
 const name = 'Color';
 const middlewares = [];

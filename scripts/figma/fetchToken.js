@@ -7,7 +7,7 @@ const path = require('path');
 
 // from article https://www.figma.com/file/JfZz46bVQzUA2TTtoSnhnG/Ishan(deisgn-token)?node-id=5%3A19
 
-const figmaKey = 'tpwhHRfoXMkzuFIYE9becy'; // TODO: put to env
+const figmaKey = process.env.FIGMA_FILE_KEY;
 const figmaAPIToken = process.env.FIGME_PERSONAL_ACCESS_TOKEN;
 
 const PATH = path.resolve(__dirname, '../../__temp__/figma.json');
