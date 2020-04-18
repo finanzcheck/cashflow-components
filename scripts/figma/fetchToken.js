@@ -2,6 +2,8 @@ const axios = require('axios');
 const fs = require('fs-extra');
 const path = require('path');
 
+import { logger } from '../../lib/helper/logger';
+
 // https://github.com/mikaelvesavuori/figmagic/tree/master/bin/functions
 // https://www.figma.com/file/K39TRbltDVcWFlpzw9r7Zh/Figmagic-%E2%80%94-Design-System-for-Tokens?node-id=2605%3A12
 
@@ -28,17 +30,16 @@ const getFigmaObjTree = async (figmaApiKey, figmaId) => {
       // console.log(result.document.children[0].children); // the frames
       // console.log(result.document.children[0].children[1]); // type
       // const x = fs.outputJson(path.resolve(PATH, `figma.json`), result);
-      console.log('start caching...');
+      logger.info('caching figma data');
 
       // TODO: compare result.version: "288287639" in response to the version stored to prevent unnecessary steps
       storeFile(result);
     })
     .then(() => {
-      console.log('caching done');
+      logger.info('caching figma data done');
     })
     .catch(err => {
-      console.log('errors');
-      console.log(err);
+      logger.error(`caching figma data: ${logger.highlightError(err)}`);
     });
 };
 
