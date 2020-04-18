@@ -195,6 +195,10 @@ Response:
 
 # TODO
 
+_clarify the naming convention from UX is matching what happesn with the theming on Catalyst and Affe_
+
+get rid of axios @ fetchToken and use node-fetch
+
 https://www.figma.com/plugin-docs/api/ComponentNode/
 
 export async (do we need this?)
@@ -251,8 +255,18 @@ Questions:
 - how to use meta data for components to give information to load as image or not
 - how to use styles sub-object?
 - what categories does Theo have? -> https://github.com/salesforce-ux/theo#supported-categories
-  \*/
 
-// https://www.figma.com/developers/api#library-items
-// https://blog.prototypr.io/design-tokens-with-figma-aef25c42430f
-// https://www.figma.com/file/tpwhHRfoXMkzuFIYE9becy/CashFlow-Code?node-id=0%3A1
+https://www.figma.com/developers/api#library-items
+https://blog.prototypr.io/design-tokens-with-figma-aef25c42430f
+https://www.figma.com/file/tpwhHRfoXMkzuFIYE9becy/CashFlow-Code?node-id=0%3A1
+
+https://github.com/mikaelvesavuori/figmagic/tree/master/bin/functions
+https://www.figma.com/file/K39TRbltDVcWFlpzw9r7Zh/Figmagic-%E2%80%94-Design-System-for-Tokens?node-id=2605%3A12
+
+from article https://www.figma.com/file/JfZz46bVQzUA2TTtoSnhnG/Ishan(deisgn-token)?node-id=5%3A19
+
+compare fetchToken - result.version: "288287639" in response to the version stored to prevent unnecessary steps
+on result is the information about the last changed date -> compare with a cached one
+console.log(result.document.children[0].children); // the frames
+console.log(result.document.children[0].children[1]); // type
+const x = fs.outputJson(path.resolve(PATH, `figma.json`), result);
