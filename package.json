@@ -11,7 +11,8 @@
     "preview-token": "open tokens/out/figma.html",
     "token": "yarn build-token && yarn preview-token",
     "figma": "dotenv-load babel-node ./scripts/figma/fetchToken.js",
-    "normalize": "dotenv-load babel-node ./scripts/tokenNormalizer.js"
+    "normalize": "dotenv-load babel-node ./scripts/tokenNormalizer.js",
+    "image": "dotenv-load babel-node ./scripts/figma/fetchImages.js"
   },
   "bit": {
     "env": {
@@ -56,6 +57,7 @@
     "dotenv-load": "2.0.0",
     "fs-extra": "9.0.0",
     "jest": "25.3.0",
+    "node-fetch": "2.6.0",
     "path": "0.12.7",
     "prettier": "2.0.4",
     "theo": "8.1.5",

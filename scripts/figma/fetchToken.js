@@ -1,25 +1,25 @@
-const axios = require("axios");
-const fs = require("fs-extra");
-const path = require("path");
+const axios = require('axios');
+const fs = require('fs-extra');
+const path = require('path');
 
 // https://github.com/mikaelvesavuori/figmagic/tree/master/bin/functions
 // https://www.figma.com/file/K39TRbltDVcWFlpzw9r7Zh/Figmagic-%E2%80%94-Design-System-for-Tokens?node-id=2605%3A12
 
 // from article https://www.figma.com/file/JfZz46bVQzUA2TTtoSnhnG/Ishan(deisgn-token)?node-id=5%3A19
 
-const figmaKey = "tpwhHRfoXMkzuFIYE9becy"; // TODO: put to env
+const figmaKey = 'tpwhHRfoXMkzuFIYE9becy'; // TODO: put to env
 const figmaAPIToken = process.env.FIGME_PERSONAL_ACCESS_TOKEN;
 
-const PATH = path.resolve(__dirname, "../../__temp__/figma.json");
+const PATH = path.resolve(__dirname, '../../__temp__/figma.json');
 
-const storeFile = fields => fs.outputJson(PATH, fields);
+const storeFile = data => fs.outputJson(PATH, data);
 
 const getFigmaObjTree = async (figmaApiKey, figmaId) => {
   axios
-    .get("https://api.figma.com/v1/files/" + figmaId, {
+    .get('https://api.figma.com/v1/files/' + figmaId, {
       headers: {
-        "X-Figma-Token": figmaApiKey,
-        "Content-Type": "application/json",
+        'X-Figma-Token': figmaApiKey,
+        'Content-Type': 'application/json',
       },
     })
     .then(res => {
@@ -28,19 +28,26 @@ const getFigmaObjTree = async (figmaApiKey, figmaId) => {
       // console.log(result.document.children[0].children); // the frames
       // console.log(result.document.children[0].children[1]); // type
       // const x = fs.outputJson(path.resolve(PATH, `figma.json`), result);
-      console.log("start caching...");
+      console.log('start caching...');
+
+      // TODO: compare result.version: "288287639" in response to the version stored to prevent unnecessary steps
       storeFile(result);
     })
     .then(() => {
-      console.log("caching done");
+      console.log('caching done');
     })
     .catch(err => {
-      console.log("errors");
+      console.log('errors');
       console.log(err);
     });
 };
 
 getFigmaObjTree(figmaAPIToken, figmaKey);
+
+// GET/v1/files/:file_key/components - Get metadata on a component by key
+// https://www.figma.com/plugin-docs/api/properties/nodes-exportasync/
+
+// some helpful methods https://github.com/figma/figma-api-demo/blob/master/figma-to-react/lib/figma.js
 
 /*
 // TODO: normalize ->
