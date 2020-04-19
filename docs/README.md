@@ -37,7 +37,21 @@ yarn bit tag --all 1.0.0
 yarn bit export marcelstieber.cashflow-components
 ```
 
+export a specific component
+
+```
+bit export bit.movie-app hello/world
+```
+
 NOTE: at the moment the repo is bound to the wrong account
+
+[More on exporting with Bit](https://docs.bit.dev/docs/export#__docusaurus)
+
+## Documentation
+
+Bit scans jsDocs automatically to add a documentation to the component on bit.dev
+
+[Docs on Bit](https://docs.bit.dev/docs/documenting-components)
 
 ### Handle Global Types
 
