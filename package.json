@@ -7,9 +7,11 @@
   "author": "Marcel Stieber <marcel.stieber@finanzcheck.de>",
   "license": "MIT",
   "scripts": {
-    "build-token": "yarn theo tokens/json/figma.json --transform web --setup tokens/setup.js --format custom-properties.css,module.js,html --dest tokens/out",
+    "tag:all": "bit tag --all",
+    "bit:export": "bit export marcelstieber.cashflow-components",
+    "build-token": "theo tokens/json/figma.json --transform web --setup tokens/setup.js --format custom-properties.css,module.js,html --dest tokens/out",
     "preview-token": "open tokens/out/figma.html",
-    "token": "yarn build-token && yarn preview-token",
+    "token": "build-token && yarn preview-token",
     "figma": "dotenv-load babel-node ./scripts/figma/fetchToken.js",
     "normalize": "dotenv-load babel-node ./scripts/tokenNormalizer.js",
     "image": "dotenv-load babel-node ./scripts/figma/fetchImages.js"
