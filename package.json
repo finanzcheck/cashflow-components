@@ -71,7 +71,7 @@
     "eslint-plugin-react-hooks": "3.0.0",
     "fs-extra": "9.0.0",
     "jest": "25.3.0",
-    "node-fetch": "2.6.0",
+    "node-fetch": "2.6.1",
     "path": "0.12.7",
     "prettier": "2.0.4",
     "theo": "8.1.5",
